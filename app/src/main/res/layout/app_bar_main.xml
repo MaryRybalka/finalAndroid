@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".views.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.MaterialComponents.CompactMenu"
-        android:background="@drawable/side_nav_bar">
+        android:theme="@style/Theme.Menu.AppBarOverlay"
+        android:background="@color/emerald_500"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"

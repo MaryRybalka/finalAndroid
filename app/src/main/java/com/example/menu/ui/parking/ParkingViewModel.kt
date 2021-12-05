@@ -1,13 +1,13 @@
-package com.example.menu.ui.chill
+package com.example.menu.ui.parking
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ChillViewModel : ViewModel() {
+class ParkingViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Chill Zone"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

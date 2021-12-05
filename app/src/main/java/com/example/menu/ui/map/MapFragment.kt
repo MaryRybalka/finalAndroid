@@ -1,4 +1,4 @@
-package com.example.menu.ui.vacation
+package com.example.menu.ui.map
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.menu.databinding.FragmentVacationBinding
+import com.example.menu.databinding.FragmentMapBinding
 
-class VacationFragment : Fragment() {
+class MapFragment : Fragment() {
 
-    private lateinit var vacationViewModel: VacationViewModel
-    private var _binding: FragmentVacationBinding? = null
+    private lateinit var mapViewModel: MapViewModel
+    private var _binding: FragmentMapBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,15 +23,15 @@ class VacationFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        vacationViewModel =
-            ViewModelProvider(this).get(VacationViewModel::class.java)
+    ): View {
+        mapViewModel =
+            ViewModelProvider(this).get(MapViewModel::class.java)
 
-        _binding = FragmentVacationBinding.inflate(inflater, container, false)
+        _binding = FragmentMapBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textVacation
-        vacationViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textHome
+        mapViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

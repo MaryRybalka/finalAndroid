@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.menu.ui.vacation.VacationFragment"
-        android:label="@string/menu_vacation"
-        tools:layout="@layout/fragment_vacation" />
+        android:id="@+id/nav_parking"
+        android:name="com.example.menu.ui.parking.ParkingFragment"
+        android:label="@string/menu_parking"
+        tools:layout="@layout/fragment_parking" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.menu.ui.chill.ChillFragment"
-        android:label="@string/menu_chill"
-        tools:layout="@layout/fragment_chill" />
+        android:id="@+id/nav_map"
+        android:name="com.example.menu.ui.map.MapFragment"
+        android:label="@string/menu_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

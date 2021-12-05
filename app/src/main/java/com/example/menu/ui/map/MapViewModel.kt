@@ -1,13 +1,13 @@
-package com.example.menu.ui.vacation
+package com.example.menu.ui.map
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class VacationViewModel : ViewModel() {
+class MapViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Vacation Zone"
+        value = "This is Map Zone"
     }
     val text: LiveData<String> = _text
 }
