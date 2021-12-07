@@ -20,8 +20,6 @@ class ParkingFragment : Fragment() {
     private lateinit var parkingViewModel: ParkingViewModel
     private var _binding: FragmentParkingBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     private val singleItemController: SingleItemController by lazy { SingleItemController() }
