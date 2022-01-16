@@ -3,11 +3,21 @@ package com.example.menu.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.menu.R
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
+    private val _header = MutableLiveData<String>().apply {
         value = "This is Sweet Home "
     }
-    val text: LiveData<String> = _text
+    private val _article_first = MutableLiveData<String>().apply {
+        value = "This is Sweet Home "
+    }
+    private val _article_second = MutableLiveData<String>().apply {
+        value = "This is Sweet Home "
+    }
+
+    val header: LiveData<String> = _header
+    val article_first: LiveData<String> = _article_first
+    val article_second: LiveData<String> = _article_second
 }
