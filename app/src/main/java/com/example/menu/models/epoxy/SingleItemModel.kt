@@ -10,13 +10,22 @@ import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.example.menu.R
 import com.example.menu.models.Item
+import com.example.menu.models.ItemDataFactory
+import com.squareup.picasso.Picasso
 
 
 @EpoxyModelClass(layout = R.layout.singleitem_layout)
 abstract class SingleItemModel (@EpoxyAttribute var item: Item) : EpoxyModelWithHolder<SingleItemModel.ItemHolder>(){
 
     override fun bind(holder: ItemHolder) {
-        holder.imageView.setImageResource(item.image)
+        val grid = ItemDataFactory.random.nextInt(8)
+        Picasso.get()
+            .load("https://random.imagecdn.app/500/17$grid")
+            .resize(150, 150)
+            .centerCrop()
+            .placeholder(R.drawable.ic_launcher_foreground)
+            .error(item.image)
+            .into(holder.imageView);
         holder.titleView.text = item.title
         holder.descView.text = item.desc
         holder.itemField.setBackgroundResource(item.border)

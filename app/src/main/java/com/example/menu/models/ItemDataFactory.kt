@@ -3,7 +3,7 @@ package com.example.menu.models
 import java.util.*
 
 object ItemDataFactory{
-    private val random = Random()
+    val random = Random()
 
     fun getItems(count:Int) : List<Item>{
         val items = mutableListOf<Item>()
