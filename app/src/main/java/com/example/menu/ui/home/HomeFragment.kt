@@ -43,6 +43,13 @@ class HomeFragment : Fragment() {
             .error(R.drawable.ic_launcher_background)
             .into(imageView2);
 
+        val imageView3: ImageView = binding.thirdImageHome
+        Picasso.get()
+            .load("https://www.navalhistory.org/wp-content/uploads/2018/04/11-Bilgewater-the-mascot-of-the-Coast-Guard-Academy-circa-1944-350x293.jpg")
+            .placeholder(R.drawable.ic_launcher_foreground)
+            .error(R.drawable.ic_launcher_background)
+            .into(imageView3);
+
         return root
     }
 
